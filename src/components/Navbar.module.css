@@ -3,6 +3,12 @@
     background: greenyellow;
   }
   
-.item {
+.item a {
+    font-size: 22px;
+    margin: 20px;
     color: #ffffff;
+}
+
+.item.active a {
+  color: goldenrod;
 }

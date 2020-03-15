@@ -1,13 +1,11 @@
 import React from 'react';
-import classes from './Profile.module.css';
+import test from './Profile.module.css';
 
-let test = {
-    "item": "Profile_item__ONuNu"
-}
+
 
 const Profile = () => {
     return(
-        <div className="content">
+        <div className={test.content}>
             <div>
                 <img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528_960_720.jpg"/>
             </div>
