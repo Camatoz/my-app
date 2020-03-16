@@ -14,9 +14,10 @@ const MyPosts = () => {
             </div>
             <div className='post'>
                 <Post/>
-                <div className={test.item}>22222</div>
-                <div className={test.item}>33333</div>
-                <div className={test.item}>44444</div>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
             </div>
         </div>
     );
