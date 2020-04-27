@@ -1,6 +1,7 @@
 .nav {
     grid-area: n;
     background: greenyellow;
+    padding: 20px;
   }
   
 .item a {
@@ -9,6 +10,6 @@
     color: #ffffff;
 }
 
-.item.active a {
-  color: goldenrod;
+.item a.active {
+  color: rgb(255, 214, 110);
 }
