@@ -1,3 +1,13 @@
-.two {
-    color: white;
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr; 
+}
+
+.dialogsItems,
+.messages {
+    padding: 10px;
+}
+
+.dialogsItems .active {
+    color: khaki;
 }
