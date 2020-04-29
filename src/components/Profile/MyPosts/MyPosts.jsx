@@ -4,20 +4,31 @@ import Post from './Post/Post'
 
 
 const MyPosts = () => {
+
+    let postData = [
+        {id: 1, message: 'Hi, how are you?', like: 12},
+        {id: 2, message: 'What are you doing?', like: 99},
+        {id: 3, message: 'Hello, that time it is?', like: 0},
+        {id: 4, message: 'Hi man!', like: 33},
+        {id: 5, message: 'Hu are you?', like: 77}
+    ]
+
     return(
-        <div>
+        <div className={test.postsBlock}>
             <div>
-               My post
+               <h3>My post</h3>
                 <div>
-                    new post
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
                 </div>
             </div>
-            <div className='post'>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+            <div className={test.post}>
+                <Post message={postData[0].message} like={postData[0].like} />
+                <Post message={postData[1].message} like={postData[1].like} />
+                <Post message={postData[2].message} like={postData[2].like} />
+                <Post message={postData[3].message} like={postData[3].like} />
             </div>
         </div>
     );

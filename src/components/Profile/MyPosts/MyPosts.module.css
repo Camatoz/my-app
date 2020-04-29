@@ -2,3 +2,7 @@
 .item {
     color: rgb(113, 221, 113);
 }
+
+.postsBlock {
+    padding: 10px;
+}

@@ -1,5 +1,11 @@
 .item {
-  color: rgb(113, 221, 113);
+  color: #71dd71;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.message {
+  margin: 0 15px;
 }
 
 .item img {
