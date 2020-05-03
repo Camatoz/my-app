@@ -1,0 +1,19 @@
+.greyWrapper {
+    padding: 10px;
+}
+
+.newsWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsItem {
+    width: 30%;
+    padding: 10px;
+    background: lavender;
+    border-radius: 5px;
+}
+
+.newsDate {
+    text-align: right;
+}
