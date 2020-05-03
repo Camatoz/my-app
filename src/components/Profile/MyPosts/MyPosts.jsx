@@ -5,19 +5,15 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-
-
     let postselements = 
     props.posts.map( p => <Post message={p.message} like={p.like} />);
-
-   
 
     return(
         <div className={test.postsBlock}>
             <div>
                <h3>My post</h3>
                 <div>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <textarea name="" id="" cols="30" rows="2"></textarea>
                 </div>
                 <div>
                     <button>Add post</button>
