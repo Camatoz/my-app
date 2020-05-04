@@ -9,6 +9,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Tuning from './components/Tuning/Tuning';
+import NewsItem from './components/News/NewsItem/NewsItem';
 
 
 const App = (props) => {
@@ -23,7 +24,7 @@ const App = (props) => {
             <Route path="/profile" component={Profile} /> */}
             <Route path="/dialogs" render={ () => <Dialogs dialogs={props.dialogs} messages={props.messages} /> } />
             <Route path="/profile" render={ () => <Profile posts={props.posts} /> } />
-            <Route path="/news" component={News} />
+            <Route path="/news" render={ () => <News newsData={props.newsData} /> } />
             <Route path="/music" component={Music} />
             <Route path="/tuning" component={Tuning} />
           </div>
