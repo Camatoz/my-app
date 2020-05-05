@@ -9,7 +9,6 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Tuning from './components/Tuning/Tuning';
-import NewsItem from './components/News/NewsItem/NewsItem';
 
 
 const App = (props) => {
@@ -22,9 +21,12 @@ const App = (props) => {
           <div className="app-wrapper-content">
             {/* <Route path="/dialogs" component={Dialogs} />
             <Route path="/profile" component={Profile} /> */}
-            <Route path="/dialogs" render={ () => <Dialogs dialogs={props.dialogs} messages={props.messages} /> } />
-            <Route path="/profile" render={ () => <Profile posts={props.posts} /> } />
-            <Route path="/news" render={ () => <News newsData={props.newsData} /> } />
+            <Route path="/dialogs" render={ () => 
+              <Dialogs state={props.state.dialogsPage}  /> } />
+            <Route path="/profile" render={ () => 
+              <Profile state={props.state.profilePage} /> } />
+            <Route path="/news" render={ () => 
+              <News state={props.state.newsPage} /> } />
             <Route path="/music" component={Music} />
             <Route path="/tuning" component={Tuning} />
           </div>

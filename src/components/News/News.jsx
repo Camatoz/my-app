@@ -7,7 +7,7 @@ import NewsItem from './NewsItem/NewsItem';
 const News = (props) => {
 
     let newsElement =
-    props.newsData.map(news => <NewsItem title={news.title} data={news.data} /> );
+    props.state.newsData.map(news => <NewsItem title={news.title} data={news.data} /> );
 
     return(
         <div className={test.greyWrapper}>
