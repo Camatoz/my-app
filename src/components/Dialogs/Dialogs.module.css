@@ -1,13 +1,58 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr; 
+    grid-template-columns: 3fr 9fr; 
 }
 
 .dialogsItems,
 .messages {
-    padding: 10px;
+    padding: 20px;
 }
 
 .dialogsItems .active {
     color: khaki;
+}
+
+.dialogsWrapper,
+.messagewrapper {
+    background: lavender;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.messagewrapper {
+    height: 91.5%;
+}
+
+.messages {
+    padding-left: 0;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.avaName {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+}
+
+.ava {
+    height: 50px;
+}
+
+.ava img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background: #cccccc;
+    border-radius: 15px;
+    margin-right: 10px;
 }

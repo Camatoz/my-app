@@ -3,7 +3,10 @@ import test from './../Dialogs.module.css';
 
 const Message = (props) => {
     return (
-        <div className={test.message}>{props.message}</div>
+        <div className={test.message}>
+            <div className={test.circle}></div>
+            <div>{props.message}</div>
+        </div>
     )
 }
 

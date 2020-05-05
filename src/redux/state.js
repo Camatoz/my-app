@@ -29,12 +29,19 @@ let state = {
     },
     newsPage: {
         newsData: [
-            {id: 1, data: "12.04.2020", title: "Article"},
+            {id: 1, data: "12.04.2020", title: "Articlewww"},
             {id: 2, data: "25.05.2020", title: "It's interesting"},
             {id: 3, data: "03.06.2020", title: "Magazine"},
             {id: 1, data: "12.04.2020", title: "Article"},
             {id: 2, data: "25.05.2020", title: "It's interesting"},
             {id: 3, data: "03.06.2020", title: "Magazine"}
+        ]
+    },
+    friendsPart: {
+        friendsData:[
+            {id: 1, name: 'Ruslan'},
+            {id: 2, name: 'Andrey'},
+            {id: 3, name: 'Boris'}
         ]
     }
 }

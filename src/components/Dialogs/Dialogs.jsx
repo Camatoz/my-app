@@ -15,10 +15,14 @@ const Dialogs = (props) => {
     return(
         <div className={test.dialogs}>
             <div className={test.dialogsItems}>
-                {dialogsElements}
+                <div className={test.dialogsWrapper}>
+                    {dialogsElements}
+                </div>
             </div>
             <div className={test.messages}>
-                {messageElements}
+                <div className={test.messagewrapper}>
+                    {messageElements}
+                </div>
             </div>
         </div>
     )
