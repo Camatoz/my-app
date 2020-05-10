@@ -7,7 +7,6 @@ import state from '../../redux/state';
 
 
 const Dialogs = (props) => {
-    console.log(state);
 
     let dialogsElements = 
     props.one.dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
@@ -19,7 +18,8 @@ const Dialogs = (props) => {
 
     let addDialog = () => {
         let text = newDialogElement.current.value;
-        alert(text);
+        props.addDialog(text);
+        newDialogElement.current.value = '';    
     }
 
     return(

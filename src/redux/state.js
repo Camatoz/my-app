@@ -7,7 +7,7 @@ let state = {
             {id: 2, message: 'What are you doing?', like: 99},
             {id: 3, message: 'Hello, that time it is?', like: 0},
             {id: 4, message: 'Hi man!', like: 33},
-            {id: 5, message: 'Hu are you?', like: 77}
+            {id: 5, message: 'How are you?', like: 77}
         ]
     },
     dialogsPage: {
@@ -56,6 +56,18 @@ export let addPost = (postMessage) => {
     };
 
     state.profilePage.posts.push(newPost);
+
+    rerenderEntireTree(state);
+}
+
+
+export let addDialog = (dialogMessage) => {
+    let newDialog = {
+        id: 6,
+        message: dialogMessage
+    };
+    
+    state.dialogsPage.messages.push(newDialog);
 
     rerenderEntireTree(state);
 }
