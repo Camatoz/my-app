@@ -9,17 +9,20 @@ import state from '../../redux/state';
 const Dialogs = (props) => {
 
     let dialogsElements = 
-    props.one.dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
+    props.dialogsPage.dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
 
     let messageElements = 
-    props.one.messages.map( m => <Message message={m.message} />);
+    props.dialogsPage.messages.map( m => <Message message={m.message} />);
 
     let newDialogElement = React.createRef();
 
     let addDialog = () => {
+        props.addDialog();  
+    }
+
+    let onDialogChange = () => {
         let text = newDialogElement.current.value;
-        props.addDialog(text);
-        newDialogElement.current.value = '';    
+        props.updateNewDialogText(text);
     }
 
     return(
@@ -35,7 +38,10 @@ const Dialogs = (props) => {
                 </div>
                 <div className={test.buttonWrapper}>
                     <div className={test.textareaWrapper}>
-                        <textarea ref={newDialogElement} cols="30" rows="2"></textarea>
+                        <textarea 
+                            onChange={ onDialogChange }
+                            value={props.newDialogText}
+                            ref={newDialogElement} cols="30" rows="2"/>
                     </div>
                     <div>
                         <button onClick={ addDialog }>Add post</button>

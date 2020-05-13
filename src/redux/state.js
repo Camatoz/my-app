@@ -28,7 +28,8 @@ let state = {
             {id: 6, name: 'Bububu'},
             {id: 7, name: 'Olga'},
             {id: 8, name: 'Rita'}
-        ]
+        ],
+        newDialogText: "Way of the Samurai!!!"
     },
     newsPage: {
         newsData: [
@@ -49,7 +50,7 @@ let state = {
     }
 }
 
-export let addPost = (postMssage) => {
+export let addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -62,19 +63,25 @@ export let addPost = (postMssage) => {
 }
 
 
-export let addDialog = (dialogMessage) => {
+export let addDialog = () => {
     let newDialog = {
         id: 6,
-        message: dialogMessage
+        message: state.dialogsPage.newDialogText
     };
     
     state.dialogsPage.messages.push(newDialog);
+    state.dialogsPage.newDialogText = '';
 
     rerenderEntireTree(state);
 }
 
 export let updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export let updateNewDialogText = (newText) => {
+    state.dialogsPage.newDialogText = newText;
     rerenderEntireTree(state);
 }
 
