@@ -13,3 +13,13 @@
   height: 50px;
   border-radius: 30px;
 }
+
+.hard {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.hardWrapper {
+  display: flex;
+  align-items: center;
+}

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import {addPost} from './redux/state';
 import {addDialog} from './redux/state';
+import {updateNewPostText} from './redux/state';
 import {BrowserRouter} from 'react-router-dom';
 
 
@@ -13,6 +14,7 @@ export let rerenderEntireTree = (state) => {
             <App state={state} 
                  addDialog={addDialog}
                  addPost={addPost}
+                 updateNewPostText={updateNewPostText}
                   />
         </BrowserRouter>,
     document.getElementById('root'));
